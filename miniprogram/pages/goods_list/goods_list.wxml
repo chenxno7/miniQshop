@@ -1,0 +1,15 @@
+<view>
+	<searchInput></searchInput>
+	<!-- 商品列表内容 -->
+	<view class="goods_container">
+		<van-tabs active="{{ active }}" bind:change="onChange">
+			<van-tab title="综合">
+				<navigator wx:for="{{goods_list}}" wx:key="index" url="{{'/pages/goods_detail/goods_detail?goods_id='+item.goods_id}}">
+					<van-card num="{{item.goods_number}}" price="{{item.goods_price}}" title="{{item.goods_name}}" thumb="{{ item.goods_big_logo }}" />
+				</navigator>
+			</van-tab>
+			<van-tab title="销量">按销量</van-tab>
+			<van-tab title="价格">按价格</van-tab>
+		</van-tabs>
+	</view>
+</view>

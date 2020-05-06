@@ -1,0 +1,18 @@
+.search-box{
+  width: 750rpx;
+  height: 70rpx;
+  background-color: #d81e06;
+  /* padding: 0rpx 20rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input{
+  width: 700rpx;
+  height: 55rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 55rpx;
+  color: #666;
+}

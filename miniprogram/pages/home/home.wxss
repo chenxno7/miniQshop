@@ -1,0 +1,40 @@
+/* pages/home/home.wxss */
+.swiper>swiper{
+  height: 300rpx;
+}
+.banner{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.nav image{
+  width: 128rpx;
+  height: 140rpx;
+}
+.floor{
+  margin-top: 50rpx;
+}
+.floor>.title>image{
+  width: 750rpx;
+  height: 50rpx;
+}
+.content{
+  padding: 0 20rpx;
+  height: 386rpx;
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.content>.first{
+  height: 100%;
+}
+.content>image{
+  width: 232rpx;
+  height: 50%;
+}

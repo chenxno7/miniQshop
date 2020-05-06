@@ -1,0 +1,59 @@
+<button bindgetuserinfo="login" type='primary' plain open-type="getUserInfo" class="btn" wx:if="{{!logined}}">登录</button>
+<view wx:else>
+	<!-- 头像部分 -->
+	<view class="avatar_box">
+		<image src="{{userInfo.avatarUrl}}" class="avatar_bg"></image>
+		<view class="avatar_info">
+			<image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+			<view>{{userInfo.nickName}}</view>
+		</view>
+	</view>
+	<!-- 收藏功能 -->
+	<view class="like">
+		<view>
+			<view>0</view>
+			<view>收藏的店铺</view>
+		</view>
+		<view>
+			<view>0</view>
+			<view>收藏的商品</view>
+		</view>
+		<view>
+			<view>0</view>
+			<view>喜欢的商品</view>
+		</view>
+		<view>
+			<view>0</view>
+			<view>我的足迹</view>
+		</view>
+	</view>
+	<!-- 订单模块 -->
+	<view class="order">
+		<view class="order_title">我的订单</view>
+		<view class="order_box">
+			<view>
+				<image src="/images/all.png"></image>
+				<view>全部订单</view>
+			</view>
+			<view>
+				<image src="/images/pay.png"></image>
+				<view>待付款</view>
+			</view>
+			<view>
+				<image src="/images/road.png"></image>
+				<view>待收货</view>
+			</view>
+			<view>
+				<image src="/images/repay.png"></image>
+				<view>退款/退货</view>
+			</view>
+		</view>
+	</view>
+  <!-- 收货地址 -->
+  <view class="address" bindtap="handleAddress">管理收货地址</view>
+  <!-- 其余功能 -->
+  <view class="contact">
+    <view>联系我们</view>
+    <view>13798233857</view>
+  </view>
+</view>

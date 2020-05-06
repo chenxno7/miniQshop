@@ -1,0 +1,39 @@
+.category{
+  height: 100%;
+}
+.cat-container{
+  display: flex;
+  justify-content: start;
+}
+.custom-class{
+  width: 175rpx;
+}
+.cate-content{
+  width: 600rpx;
+}
+.cate-content .title{
+  padding: 10rpx;
+  text-align: center;
+  font-size: 60rpx;
+  color: #666;
+}
+.cate-content>scroll-view,.custom-class>scroll-view{
+  height: 100vh;
+}
+.navbox{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.navbox>.nav{
+  width: 160rpx;
+  height: 250rpx;
+  margin: 10rpx;
+}
+.navbox>.nav>image{
+  width: 100%;
+  height: 180rpx;
+}
+.navbox>.nav>view{
+  text-align: center;
+}

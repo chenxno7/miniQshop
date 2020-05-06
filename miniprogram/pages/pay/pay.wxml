@@ -1,0 +1,23 @@
+<!-- 详细地址 -->
+<view class="address" bindtap="handleAddress">
+	<view>{{address.userName}}</view>
+	<view>{{address.telNumber}}</view>
+	<view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+</view>
+<!-- 商品信息 -->
+<view class="lists_container">
+	<view class="lists_item" wx:for="{{lists}}" wx:key="index">
+		<view class="image_box">
+			<image src="{{item.goods_small_logo}}"></image>
+		</view>
+    <view class="info_box">
+      <view class="info_title">{{item.goods_name}}</view>
+      <view class="info_detail">
+        <view class="goods_price">￥{{item.goods_price}}</view>
+        <view class="goods_num">X{{item.num}}</view>
+      </view>
+    </view>
+	</view>
+</view>
+<!-- 底部功能 -->
+<van-submit-bar price="{{ price*100 }}" button-text="支付" bind:submit="handlePay" />

@@ -1,0 +1,73 @@
+.swiper,swiper,.block,swiper-item,.pics{
+  width: 750rpx;
+  height: 750rpx;
+}
+.content{
+  padding: 10rpx;
+}
+.price{
+  color: #d81e06;
+  font-size: 40rpx;
+  padding: 20rpx;
+}
+.desc{
+  display: flex;
+  justify-content: space-between;
+}
+.desc>.name{
+  color: #666;
+  padding: 10rpx;
+  flex: 5;
+}
+.line{
+  height: 60rpx;
+  width: 3rpx;
+  background-color: #666;
+  align-self: center;
+}
+.like{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.like>image{
+  align-self: center;
+  width: 45rpx;
+  height: 45rpx;
+}
+.detail image{
+  width: 750rpx;
+  height: 750rpx;
+}
+.detail{
+  margin-bottom: 100rpx;
+}
+.attr_container{
+  border: 1rpx solid #666;
+  border-top: 0;
+}
+.attr_card{
+  width: 750rpx;
+  display: flex;
+  color: #666;
+  padding: 10rpx;
+  border-top: 1rpx solid #666;
+  box-sizing: border-box;
+}
+.attr_card .attr_name{
+  flex: 1;
+  border-right: 1rpx solid #666;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+.attr_card .attr_value{
+  flex: 2;
+  box-sizing: border-box;
+  padding: 10rpx 15rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+}

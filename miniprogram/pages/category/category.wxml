@@ -1,0 +1,29 @@
+<view class="category">
+  <!-- 搜索框  -->
+  <searchInput></searchInput>
+  <!-- 分类内容 -->
+  <view class="cat-container">
+    <!-- 左侧菜单栏 -->
+    <view class="custom-class">
+      <scroll-view scroll-y="true">
+        <van-sidebar active-key="{{ activeKey }}" bind:change="changeContent">
+          <van-sidebar-item wx:for="{{sideLists}}" wx:key="index" title="{{item.cat_name}}"/>
+        </van-sidebar>
+      </scroll-view>
+    </view>
+    <!-- 右侧分类详情 -->
+    <view class="cate-content">
+      <scroll-view scroll-y="true">
+          <view wx:for="{{contentLists}}" wx:key="index">
+            <view class="title">/ {{item.cat_name}} /</view>
+            <view class="navbox">
+              <navigator class="nav" wx:for="{{item.children}}" wx:key="index" url="{{'/pages/goods_list/goods_list?cid='+item.cat_id}}">
+                <image src="{{item.cat_icon}}"></image>
+                <view>{{item.cat_name}}</view>
+              </navigator>
+            </view>
+          </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

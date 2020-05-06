@@ -1,0 +1,53 @@
+<!-- 轮播图 -->
+<view class="swiper">
+	<swiper indicator-dots="true" autoplay="true" interval="3000" duration="800" circular="true">
+		<block class="block" wx:for="{{goods_detail.pics}}" wx:key="index">
+			<swiper-item>
+				<image class="pics" src="{{item.pics_big}}" bindtap="previewImage" data-pics="{{index}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<!-- 基本信息 -->
+<view class="content">
+	<text class="price">￥{{goods_detail.goods_price}}</text>
+	<view class="desc">
+		<view class="name">{{goods_detail.goods_name}}</view>
+		<view class="line"></view>
+		<view class="like">
+			<image src="/images/like.png"></image>
+			<view>收藏</view>
+		</view>
+	</view>
+</view>
+<!-- 图文详解 -->
+<view class="detail">
+	<!-- <view class="title">图文详解</view>
+	<image src="{{goods_detail.goods_big_logo}}"></image> -->
+	<van-tabs active="{{ active }}" bind:change="onChange">
+		<van-tab title="图文详解">
+			<image wx:for="{{goods_detail.pics}}" wx:key="index" src="{{item.pics_big}}"></image>
+		</van-tab>
+		<van-tab title="规格参数">
+			<van-divider contentPosition="center">规格参数</van-divider>
+			<view class="attr_container">
+				<view class="attr_card" wx:for="{{goods_detail.attrs}}" wx:key="index">
+					<view class="attr_name">{{item.attr_name}}</view>
+					<view class="attr_value">{{item.attr_value}}</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="售后保障">
+			<van-divider contentPosition="center">售后保障</van-divider>
+		</van-tab>
+	</van-tabs>
+</view>
+<!-- 底部功能栏 -->
+<view class="footer">
+	<van-goods-action>
+		<van-goods-action-icon icon="chat-o" text="客服" bind:click="" />
+		<van-goods-action-icon icon="cart-o" text="购物车" bindtap="toCart" />
+		<van-goods-action-button text="加入购物车" type="warning" bindtap="handleCartAdd" />
+		<van-goods-action-button text="立即购买" bindtap="buy" />
+	</van-goods-action>
+</view>
